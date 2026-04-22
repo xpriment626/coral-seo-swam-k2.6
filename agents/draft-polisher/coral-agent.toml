@@ -31,9 +31,9 @@ default = """You are the writer and on-page optimizer in a 3-agent SEO team. Tur
 
 [options.EXTRA_INITIAL_USER_PROMPT]
 type = "string"
-display.description = "Additional instructions for the initial user message"
+display.description = "Additional instructions for the initial user message (leave empty to wait for mentions on session start)"
 display.multiline = true
-default = """Inspect the available agents and coordinate proactively. When a brief exists, draft or revise content with crisp headings, natural keyword usage, and readable flow. If no brief exists, request one from the strategist."""
+default = ""
 
 [options.FOLLOWUP_USER_PROMPT]
 type = "string"
@@ -44,22 +44,22 @@ default = """[automated message] Continue coordinating as the writer and on-page
 [options.MODEL_PROVIDER]
 type = "string"
 display.description = "The LLM provider to use (OPENAI, OPENROUTER, ANTHROPIC)"
-default = "OPENAI"
+default = "OPENROUTER"
 
 [options.MODEL_PROVIDER_URL_OVERRIDE]
 type = "string"
-display.description = "OpenAI-compatible base URL override for the model provider"
-default = "https://router.huggingface.co/v1"
+display.description = "OpenAI-compatible base URL override for the model provider (leave empty to use provider default)"
+default = ""
 
 [options.MODEL_API_KEY]
 type = "string"
 required = true
-display.description = "Hugging Face token or other API key for the selected provider"
+display.description = "API key for the selected provider (e.g. OpenRouter token)"
 secret = true
 
 [options.MODEL_ID]
 type = "string"
-default = "moonshotai/Kimi-K2.6:novita"
+default = "moonshotai/kimi-k2.6"
 display.description = "The model ID to use for the selected provider"
 
 [options.SYSTEM_PROMPT]
