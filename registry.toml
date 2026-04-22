@@ -1,0 +1,5 @@
+[registry]
+local_agents = ["./agents/*"]
+include_coral_home_agents = false
+include_debug_agents = false
+watch_local_agents = true

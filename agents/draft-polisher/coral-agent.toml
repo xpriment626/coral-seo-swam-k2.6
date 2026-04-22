@@ -1,0 +1,79 @@
+edition = 4
+
+[agent]
+name = "draft-polisher"
+version = "0.1.0"
+summary = "Writer and on-page editor for SEO-first content production"
+description = "Drafts and polishes content using the strategist brief, maintaining clarity, structure, and on-page SEO discipline."
+readme = """
+# draft-polisher
+
+Drafts and polishes content using the strategist brief, maintaining clarity, structure, and on-page SEO discipline.
+"""
+
+[agent.license]
+type = "text"
+text = "apache-2.0"
+
+[marketplace]
+keywords = ["seo", "content", "coral", "koog", "kotlin"]
+
+[options]
+MAX_ITERATIONS = { type = "u32", default = 60, display.description = "Maximum number of LLM iterations (ignoring tool calls) to run." }
+ITERATION_DELAY_MS = { type = "u64", default = 0, display.description = "Milliseconds to wait between iterations." }
+MAX_TOKENS = { type = "u32", default = 150000, display.description = "Maximum number of tokens to use during the session." }
+
+[options.EXTRA_SYSTEM_PROMPT]
+type = "string"
+display.description = "Additional system instructions for this agent role"
+display.multiline = true
+default = """You are the writer and on-page optimizer in a 3-agent SEO team. Turn briefs into clear, compelling drafts with strong structure, scannability, entity coverage, and on-page SEO hygiene. Ask the strategist for missing constraints rather than guessing."""
+
+[options.EXTRA_INITIAL_USER_PROMPT]
+type = "string"
+display.description = "Additional instructions for the initial user message"
+display.multiline = true
+default = """Inspect the available agents and coordinate proactively. When a brief exists, draft or revise content with crisp headings, natural keyword usage, and readable flow. If no brief exists, request one from the strategist."""
+
+[options.FOLLOWUP_USER_PROMPT]
+type = "string"
+display.description = "The prompt to use for follow-up iterations"
+display.multiline = true
+default = """[automated message] Continue coordinating as the writer and on-page specialist. Improve the draft, tighten copy, and flag missing research or strategy when needed."""
+
+[options.MODEL_PROVIDER]
+type = "string"
+display.description = "The LLM provider to use (OPENAI, OPENROUTER, ANTHROPIC)"
+default = "OPENAI"
+
+[options.MODEL_PROVIDER_URL_OVERRIDE]
+type = "string"
+display.description = "OpenAI-compatible base URL override for the model provider"
+default = "https://router.huggingface.co/v1"
+
+[options.MODEL_API_KEY]
+type = "string"
+required = true
+display.description = "Hugging Face token or other API key for the selected provider"
+secret = true
+
+[options.MODEL_ID]
+type = "string"
+default = "moonshotai/Kimi-K2.6:novita"
+display.description = "The model ID to use for the selected provider"
+
+[options.SYSTEM_PROMPT]
+type = "string"
+display.description = "The system prompt to use"
+display.multiline = true
+default = """
+You are an AI agent designed to assist users by leveraging available tools and resources. Follow the user's instructions carefully and use the tools at your disposal to provide accurate, useful responses.
+-- Start of messages and status --
+<resource>coral://instruction</resource>
+<resource>coral://state</resource>
+-- End of messages and status --
+"""
+
+[runtimes.executable]
+path = "./gradlew"
+arguments = ["run"]

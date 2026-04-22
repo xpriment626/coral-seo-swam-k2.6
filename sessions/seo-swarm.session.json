@@ -1,0 +1,59 @@
+{
+  "agentGraphRequest": {
+    "agents": [
+      {
+        "id": { "name": "keyword-researcher", "version": "0.1.0", "source": "local" },
+        "name": "keyword-researcher",
+        "provider": { "type": "local", "runtime": "executable" },
+        "options": {
+          "MODEL_PROVIDER": { "type": "string", "value": "OPENAI" },
+          "MODEL_PROVIDER_URL_OVERRIDE": { "type": "string", "value": "https://router.huggingface.co/v1" },
+          "MODEL_ID": { "type": "string", "value": "moonshotai/Kimi-K2.6:novita" },
+          "MODEL_API_KEY": { "type": "string", "value": "YOUR_HF_TOKEN" }
+        }
+      },
+      {
+        "id": { "name": "content-strategist", "version": "0.1.0", "source": "local" },
+        "name": "content-strategist",
+        "provider": { "type": "local", "runtime": "executable" },
+        "options": {
+          "MODEL_PROVIDER": { "type": "string", "value": "OPENAI" },
+          "MODEL_PROVIDER_URL_OVERRIDE": { "type": "string", "value": "https://router.huggingface.co/v1" },
+          "MODEL_ID": { "type": "string", "value": "moonshotai/Kimi-K2.6:novita" },
+          "MODEL_API_KEY": { "type": "string", "value": "YOUR_HF_TOKEN" }
+        }
+      },
+      {
+        "id": { "name": "draft-polisher", "version": "0.1.0", "source": "local" },
+        "name": "draft-polisher",
+        "provider": { "type": "local", "runtime": "executable" },
+        "options": {
+          "MODEL_PROVIDER": { "type": "string", "value": "OPENAI" },
+          "MODEL_PROVIDER_URL_OVERRIDE": { "type": "string", "value": "https://router.huggingface.co/v1" },
+          "MODEL_ID": { "type": "string", "value": "moonshotai/Kimi-K2.6:novita" },
+          "MODEL_API_KEY": { "type": "string", "value": "YOUR_HF_TOKEN" }
+        }
+      }
+    ],
+    "groups": [
+      ["keyword-researcher", "content-strategist", "draft-polisher"]
+    ]
+  },
+  "namespaceProvider": {
+    "type": "create_if_not_exists",
+    "namespaceRequest": {
+      "name": "seo-swarm",
+      "deleteOnLastSessionExit": true
+    }
+  },
+  "execution": {
+    "mode": "immediate",
+    "runtimeSettings": {
+      "ttl": 1800000,
+      "persistenceMode": {
+        "mode": "hold_after_exit",
+        "duration": 60000
+      }
+    }
+  }
+}

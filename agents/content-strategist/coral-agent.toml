@@ -1,0 +1,79 @@
+edition = 4
+
+[agent]
+name = "content-strategist"
+version = "0.1.0"
+summary = "Content strategist that turns SEO findings into an article plan"
+description = "Synthesizes research into briefs, outlines, audience angles, and internal linking guidance for the writer."
+readme = """
+# content-strategist
+
+Synthesizes research into briefs, outlines, audience angles, and internal linking guidance for the writer.
+"""
+
+[agent.license]
+type = "text"
+text = "apache-2.0"
+
+[marketplace]
+keywords = ["seo", "content", "coral", "koog", "kotlin"]
+
+[options]
+MAX_ITERATIONS = { type = "u32", default = 60, display.description = "Maximum number of LLM iterations (ignoring tool calls) to run." }
+ITERATION_DELAY_MS = { type = "u64", default = 0, display.description = "Milliseconds to wait between iterations." }
+MAX_TOKENS = { type = "u32", default = 150000, display.description = "Maximum number of tokens to use during the session." }
+
+[options.EXTRA_SYSTEM_PROMPT]
+type = "string"
+display.description = "Additional system instructions for this agent role"
+display.multiline = true
+default = """You are the content strategist in a 3-agent SEO team. Convert research into a content brief, outline, angle, audience framing, entity coverage, and internal link recommendations. Pull in the researcher when evidence is missing and mention the writer when the brief is ready."""
+
+[options.EXTRA_INITIAL_USER_PROMPT]
+type = "string"
+display.description = "Additional instructions for the initial user message"
+display.multiline = true
+default = """Inspect the available agents and coordinate proactively. Turn incoming research into a high-clarity content brief with heading structure, search intent alignment, entity coverage, and conversion-aware recommendations."""
+
+[options.FOLLOWUP_USER_PROMPT]
+type = "string"
+display.description = "The prompt to use for follow-up iterations"
+display.multiline = true
+default = """[automated message] Continue coordinating as the content strategist. Refine the brief, resolve ambiguities, and keep the writer unblocked."""
+
+[options.MODEL_PROVIDER]
+type = "string"
+display.description = "The LLM provider to use (OPENAI, OPENROUTER, ANTHROPIC)"
+default = "OPENAI"
+
+[options.MODEL_PROVIDER_URL_OVERRIDE]
+type = "string"
+display.description = "OpenAI-compatible base URL override for the model provider"
+default = "https://router.huggingface.co/v1"
+
+[options.MODEL_API_KEY]
+type = "string"
+required = true
+display.description = "Hugging Face token or other API key for the selected provider"
+secret = true
+
+[options.MODEL_ID]
+type = "string"
+default = "moonshotai/Kimi-K2.6:novita"
+display.description = "The model ID to use for the selected provider"
+
+[options.SYSTEM_PROMPT]
+type = "string"
+display.description = "The system prompt to use"
+display.multiline = true
+default = """
+You are an AI agent designed to assist users by leveraging available tools and resources. Follow the user's instructions carefully and use the tools at your disposal to provide accurate, useful responses.
+-- Start of messages and status --
+<resource>coral://instruction</resource>
+<resource>coral://state</resource>
+-- End of messages and status --
+"""
+
+[runtimes.executable]
+path = "./gradlew"
+arguments = ["run"]
