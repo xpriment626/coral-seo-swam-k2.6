@@ -5,6 +5,7 @@ build/
 !**/src/test/**/build/
 .idea/
 coral-agent.dev.env
+CLAUDE.md
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -49,3 +50,6 @@ agent_log.json
 .idea
 coral-agent.dev.env
 .npmrc
+.env
+.playwright-mcp
+coral-server.log

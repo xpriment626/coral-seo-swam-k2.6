@@ -1,0 +1,165 @@
+### SEO Swarm Sandbox — full flow via one .http file
+#
+# Preflight (once per session of work):
+#   1. cp .env.example .env && edit in your OPENROUTER_API_KEY
+#   2. ./prewarm.sh                                                        # compiles so sessions don't race cold builds
+#   3. CONFIG_FILE_PATH=./registry.toml npx coralos-dev@latest server start
+#
+# Recording flow:
+#   4. Open console at http://localhost:5555/ui/console (key: dev) and park it
+#   5. Click "Send Request" above each of the three blocks below in order
+#      - First call creates the session (console live-updates to show it)
+#      - Second creates a thread as puppet
+#      - Third seeds the thread with the user prompt; agents start chatting
+
+@baseUrl = http://localhost:5555
+@authKey = dev
+
+###
+# (Optional preflight) Verify the registry has puppet + your 3 agents.
+# Good sanity check the first time you run this. Useful for confirming puppet's
+# exact version string if it differs from the one in the session-create payload below.
+
+GET {{baseUrl}}/api/v1/registry
+Authorization: Bearer {{authKey}}
+
+###
+# 1. Create session with 3 real agents + puppet, all in one group so they can
+#    thread/message each other. Captures sessionId via named-request reference.
+
+# @name createSession
+POST {{baseUrl}}/api/v1/local/session
+Authorization: Bearer {{authKey}}
+Content-Type: application/json
+
+{
+  "agentGraphRequest": {
+    "agents": [
+      {
+        "id": {
+          "name": "keyword-researcher",
+          "version": "0.1.0",
+          "registrySourceId": { "type": "local" }
+        },
+        "name": "keyword-researcher",
+        "provider": { "type": "local", "runtime": "executable" },
+        "options": {
+          "MODEL_API_KEY": { "type": "string", "value": "{{$dotenv OPENROUTER_API_KEY}}" }
+        }
+      },
+      {
+        "id": {
+          "name": "content-strategist",
+          "version": "0.1.0",
+          "registrySourceId": { "type": "local" }
+        },
+        "name": "content-strategist",
+        "provider": { "type": "local", "runtime": "executable" },
+        "options": {
+          "MODEL_API_KEY": { "type": "string", "value": "{{$dotenv OPENROUTER_API_KEY}}" }
+        }
+      },
+      {
+        "id": {
+          "name": "draft-polisher",
+          "version": "0.1.0",
+          "registrySourceId": { "type": "local" }
+        },
+        "name": "draft-polisher",
+        "provider": { "type": "local", "runtime": "executable" },
+        "options": {
+          "MODEL_API_KEY": { "type": "string", "value": "{{$dotenv OPENROUTER_API_KEY}}" }
+        }
+      },
+      {
+        "id": {
+          "name": "puppet",
+          "version": "1.0.0",
+          "registrySourceId": { "type": "local" }
+        },
+        "name": "puppet",
+        "provider": { "type": "local", "runtime": "prototype" }
+      }
+    ],
+    "groups": [
+      ["keyword-researcher", "content-strategist", "draft-polisher", "puppet"]
+    ]
+  },
+  "namespaceProvider": {
+    "type": "create_if_not_exists",
+    "namespaceRequest": {
+      "name": "default",
+      "deleteOnLastSessionExit": false
+    }
+  },
+  "execution": {
+    "mode": "immediate",
+    "runtimeSettings": {
+      "extendedEndReport": false,
+      "persistenceMode": { "mode": "hold_after_exit", "duration": 600000 }
+    }
+  }
+}
+
+###
+# 2. Create the seed thread as puppet. Participants are the three real agents.
+#    You don't list puppet itself — it's implicit.
+
+# @name createThread
+POST {{baseUrl}}/api/v1/puppet/{{createSession.response.body.namespace}}/{{createSession.response.body.sessionId}}/puppet/thread
+Authorization: Bearer {{authKey}}
+Content-Type: application/json
+
+{
+  "threadName": "SEO brief: agentic memory systems (April 2026)",
+  "participantNames": ["keyword-researcher", "content-strategist", "draft-polisher"]
+}
+
+###
+# 3. Send the user prompt into the thread, mentioning keyword-researcher.
+#    That mention unblocks the researcher's wait_for_mentions tool and the loop starts.
+
+POST {{baseUrl}}/api/v1/puppet/{{createSession.response.body.namespace}}/{{createSession.response.body.sessionId}}/puppet/thread/message
+Authorization: Bearer {{authKey}}
+Content-Type: application/json
+
+{
+  "threadId": "{{createThread.response.body.thread.id}}",
+  "content": "keyword analysis and SEO optimised blog for agentic memory systems. Research grounded in recent findings, April 2026. maximum 500 words. @keyword-researcher please start.",
+  "mentions": ["keyword-researcher"]
+}
+
+###
+# Optional follow-ups below — only needed if a loop stalls mid-run.
+###
+
+### Nudge content-strategist to produce the brief
+POST {{baseUrl}}/api/v1/puppet/{{createSession.response.body.namespace}}/{{createSession.response.body.sessionId}}/puppet/thread/message
+Authorization: Bearer {{authKey}}
+Content-Type: application/json
+
+{
+  "threadId": "{{createThread.response.body.thread.id}}",
+  "content": "@content-strategist the researcher shared findings — please produce the brief.",
+  "mentions": ["content-strategist"]
+}
+
+### Nudge draft-polisher to write
+POST {{baseUrl}}/api/v1/puppet/{{createSession.response.body.namespace}}/{{createSession.response.body.sessionId}}/puppet/thread/message
+Authorization: Bearer {{authKey}}
+Content-Type: application/json
+
+{
+  "threadId": "{{createThread.response.body.thread.id}}",
+  "content": "@draft-polisher brief is ready — please produce the 500-word draft.",
+  "mentions": ["draft-polisher"]
+}
+
+### Close the thread cleanly
+POST {{baseUrl}}/api/v1/puppet/{{createSession.response.body.namespace}}/{{createSession.response.body.sessionId}}/puppet/thread/close
+Authorization: Bearer {{authKey}}
+Content-Type: application/json
+
+{
+  "threadId": "{{createThread.response.body.thread.id}}"
+}
