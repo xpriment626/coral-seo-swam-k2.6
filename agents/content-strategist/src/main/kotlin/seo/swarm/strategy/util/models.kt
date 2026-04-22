@@ -12,7 +12,7 @@ import ai.koog.prompt.llm.LLModel
 import ai.koog.prompt.llm.LLMCapability
 import ai.koog.prompt.llm.LLMProvider
 
-private const val DEFAULT_CONTEXT_WINDOW = 256000
+private const val DEFAULT_CONTEXT_WINDOW = 256_000L
 
 fun findKoogModelByName(id: String, provider: ModelProvider): LLModel {
     val mappedProvider = when (provider) {
@@ -26,10 +26,10 @@ fun findKoogModelByName(id: String, provider: ModelProvider): LLModel {
         provider = mappedProvider,
         id = id,
         capabilities = listOf(
+            LLMCapability.Completion,
             LLMCapability.Temperature,
-            LLMCapability.Tool,
-            LLMCapability.Schema.JSON,
-            LLMCapability.Schema.StrictJSON,
+            LLMCapability.Tools,
+            LLMCapability.Schema.JSON.Standard,
         ),
         contextLength = DEFAULT_CONTEXT_WINDOW,
     )
