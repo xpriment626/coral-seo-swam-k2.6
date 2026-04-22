@@ -1,5 +1,10 @@
+[auth]
+keys = ["dev"]
+
 [registry]
-local_agents = ["./agents/*"]
+local_agents = ["/Users/bambozlor/Desktop/product-lab/coral-seo-swam-k2.6/agents/*"]
 include_coral_home_agents = false
-include_debug_agents = false
+include_debug_agents = true
 watch_local_agents = true
+
+# CONFIG_FILE_PATH=./registry.toml npx coralos-dev@latest server start
