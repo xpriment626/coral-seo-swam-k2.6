@@ -1,0 +1,825 @@
+npm warn exec The following package was not found and will be installed: coralos-dev@1.1.0-SNAPSHOT-deveximprovement-4
+npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+Passing verbatim to server: --auth.keys=dev --registry.local-agents=/home/user/computer/coral-seo-swarm-k2.6/agents/* --registry.include-coral-home-agents=false --registry.include-debug-agents=false
+[34m INFO[0;39m ROOT {[32m2026-04-22 05:25:06.655[0;39m} [39magent added: local/keyword-researcher:0.1.0 - /home/user/computer/coral-seo-swarm-k2.6/agents/keyword-researcher/coral-agent.toml
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:25:06.694[0;39m} [39magent added: local/content-strategist:0.1.0 - /home/user/computer/coral-seo-swarm-k2.6/agents/content-strategist/coral-agent.toml
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:25:06.699[0;39m} [39magent added: local/draft-polisher:0.1.0 - /home/user/computer/coral-seo-swarm-k2.6/agents/draft-polisher/coral-agent.toml
+[0;39m[34m INFO[0;39m io.ktor.server.Application {[32m2026-04-22 05:25:06.720[0;39m} [39mAutoreload is disabled because the development mode is off.
+[0;39mkotlin-logging: initializing... active logger factory: Slf4jLoggerFactory
+[34m INFO[0;39m ROOT {[32m2026-04-22 05:25:07.809[0;39m} [39mdownloaded and extracted console v0.3.11 in 859.254582ms
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:25:07.814[0;39m} [39m
+
+ For Coral console, navigate to http://localhost:5555/ui/console
+ Login using an API key matching one set in auth.keys in the server configuration.
+
+[0;39m[34m INFO[0;39m io.ktor.server.Application {[32m2026-04-22 05:25:07.817[0;39m} [39mApplication started in 1.107 seconds.
+[0;39m[34m INFO[0;39m io.ktor.server.Application {[32m2026-04-22 05:25:08.537[0;39m} [39mResponding at http://0.0.0.0:5555
+[0;39m[1;31mERROR[0;39m ROOT {[32m2026-04-22 05:26:03.574[0;39m} [31mUnexpected exception thrown from route /api/v1/local/session
+[0;39mio.ktor.server.plugins.BadRequestException: Failed to convert request body to class org.coralprotocol.coralserver.session.SessionRequest
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.convertBody(RequestConverter.kt:69)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.access$convertBody(RequestConverter.kt:1)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invokeSuspend(RequestConverter.kt:40)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invoke(RequestConverter.kt)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invoke(RequestConverter.kt)
+	at io.ktor.server.application.OnCallReceiveContext.transformBody(KtorCallContexts.kt:76)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invokeSuspend(RequestConverter.kt:28)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invoke(RequestConverter.kt)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invoke(RequestConverter.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invokeSuspend(PluginBuilder.kt:190)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invokeSuspend(PluginBuilder.kt:125)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invokeSuspend(PluginBuilder.kt:245)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invokeSuspend(PluginBuilder.kt:228)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.util.debug.ContextUtilsKt.addToContextInDebugMode(ContextUtils.kt:34)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invokeSuspend(PluginBuilder.kt:224)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceedWith(SuspendFunctionGun.kt:99)
+	at io.ktor.server.auth.ReceiveBytes$install$1.invokeSuspend(AuthenticationInterceptors.kt:170)
+	at io.ktor.server.auth.ReceiveBytes$install$1.invoke(AuthenticationInterceptors.kt)
+	at io.ktor.server.auth.ReceiveBytes$install$1.invoke(AuthenticationInterceptors.kt)
+	at io.ktor.server.application.ApplicationPluginKt$addAllInterceptors$1$1$1.invokeSuspend(ApplicationPlugin.kt:209)
+	at io.ktor.server.application.ApplicationPluginKt$addAllInterceptors$1$1$1.invoke(ApplicationPlugin.kt)
+	at io.ktor.server.application.ApplicationPluginKt$addAllInterceptors$1$1$1.invoke(ApplicationPlugin.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:92)
+	at io.ktor.server.application.PipelineCall.receiveNullable$suspendImpl(PipelineCall.kt:118)
+	at io.ktor.server.application.PipelineCall.receiveNullable(PipelineCall.kt)
+	at io.ktor.server.routing.RoutingPipelineCall.receiveNullable(RoutingPipelineCall.kt:23)
+	at io.ktor.server.routing.RoutingCall.receiveNullable(RoutingNode.kt:245)
+	at org.coralprotocol.coralserver.routes.api.v1.SessionApiKt$localSessionApi$2.invokeSuspend(SessionApi.kt:458)
+	at org.coralprotocol.coralserver.routes.api.v1.SessionApiKt$localSessionApi$2.invoke(SessionApi.kt)
+	at org.coralprotocol.coralserver.routes.api.v1.SessionApiKt$localSessionApi$2.invoke(SessionApi.kt)
+	at io.ktor.server.resources.RoutingKt$handle$2.invokeSuspend(Routing.kt:299)
+	at io.ktor.server.resources.RoutingKt$handle$2.invoke(Routing.kt)
+	at io.ktor.server.resources.RoutingKt$handle$2.invoke(Routing.kt)
+	at io.ktor.server.routing.RoutingNode$buildPipeline$1$1.invokeSuspend(RoutingNode.kt:126)
+	at io.ktor.server.routing.RoutingNode$buildPipeline$1$1.invoke(RoutingNode.kt)
+	at io.ktor.server.routing.RoutingNode$buildPipeline$1$1.invoke(RoutingNode.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:92)
+	at io.ktor.server.routing.RoutingRoot$executeResult$$inlined$execute$1.invokeSuspend(Pipeline.kt:510)
+	at io.ktor.server.routing.RoutingRoot$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.routing.RoutingRoot$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:19)
+	at io.ktor.server.routing.RoutingRoot.executeResult(RoutingRoot.kt:212)
+	at io.ktor.server.routing.RoutingRoot.interceptor(RoutingRoot.kt:71)
+	at io.ktor.server.routing.RoutingRoot$Plugin$install$1.invokeSuspend(RoutingRoot.kt:157)
+	at io.ktor.server.routing.RoutingRoot$Plugin$install$1.invoke(RoutingRoot.kt)
+	at io.ktor.server.routing.RoutingRoot$Plugin$install$1.invoke(RoutingRoot.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:119)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.server.application.hooks.CallFailed$install$1$1.invokeSuspend(CommonHooks.kt:49)
+	at io.ktor.server.application.hooks.CallFailed$install$1$1.invoke(CommonHooks.kt)
+	at io.ktor.server.application.hooks.CallFailed$install$1$1.invoke(CommonHooks.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:286)
+	at io.ktor.server.application.hooks.CallFailed$install$1.invokeSuspend(CommonHooks.kt:48)
+	at io.ktor.server.application.hooks.CallFailed$install$1.invoke(CommonHooks.kt)
+	at io.ktor.server.application.hooks.CallFailed$install$1.invoke(CommonHooks.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:92)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:510)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:19)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invokeSuspend(DefaultEnginePipeline.kt:136)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.server.engine.BaseApplicationResponse$Companion$setupFallbackResponse$1.invokeSuspend(BaseApplicationResponse.kt:349)
+	at io.ktor.server.engine.BaseApplicationResponse$Companion$setupFallbackResponse$1.invoke(BaseApplicationResponse.kt)
+	at io.ktor.server.engine.BaseApplicationResponse$Companion$setupFallbackResponse$1.invoke(BaseApplicationResponse.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:92)
+	at io.ktor.server.cio.CIOApplicationEngine$handleRequest$2$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:510)
+	at io.ktor.server.cio.CIOApplicationEngine$handleRequest$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.cio.CIOApplicationEngine$handleRequest$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:19)
+	at io.ktor.server.cio.CIOApplicationEngine$handleRequest$2.invokeSuspend(CIOApplicationEngine.kt:256)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+Caused by: io.ktor.serialization.JsonConvertException: Illegal input: Encountered an unknown key 'source' at offset 114 at path: $.agentGraphRequest.agents[0].id
+Use 'ignoreUnknownKeys = true' in 'Json {}' builder or '@JsonIgnoreUnknownKeys' annotation to ignore unknown keys.
+JSON input: .....archer", "version": "0.1.0", "source": "local" },        "na.....
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter.deserialize(KotlinxSerializationConverter.kt:79)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.convertBody(RequestConverter.kt:67)
+	... 120 common frames omitted
+Caused by: kotlinx.serialization.json.internal.JsonDecodingException: Encountered an unknown key 'source' at offset 114 at path: $.agentGraphRequest.agents[0].id
+Use 'ignoreUnknownKeys = true' in 'Json {}' builder or '@JsonIgnoreUnknownKeys' annotation to ignore unknown keys.
+JSON input: .....archer", "version": "0.1.0", "source": "local" },        "na.....
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.failOnUnknownKey(AbstractJsonLexer.kt:580)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.handleUnknown(StreamingJsonDecoder.kt:258)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeObjectIndex(StreamingJsonDecoder.kt:243)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeElementIndex(StreamingJsonDecoder.kt:178)
+	at org.coralprotocol.coralserver.agent.registry.RegistryAgentIdentifier$$serializer.deserialize(RegistryAgentIdentifier.kt:6)
+	at org.coralprotocol.coralserver.agent.registry.RegistryAgentIdentifier$$serializer.deserialize(RegistryAgentIdentifier.kt:6)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at org.coralprotocol.coralserver.agent.graph.GraphAgentRequest$$serializer.deserialize(GraphAgentRequest.kt:18)
+	at org.coralprotocol.coralserver.agent.graph.GraphAgentRequest$$serializer.deserialize(GraphAgentRequest.kt:18)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
+	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.deserialize(CollectionSerializers.kt:43)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at org.coralprotocol.coralserver.agent.graph.AgentGraphRequest$$serializer.deserialize(AgentGraphRequest.kt:9)
+	at org.coralprotocol.coralserver.agent.graph.AgentGraphRequest$$serializer.deserialize(AgentGraphRequest.kt:9)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at org.coralprotocol.coralserver.session.SessionRequest$$serializer.deserialize(SessionRequest.kt:55)
+	at org.coralprotocol.coralserver.session.SessionRequest$$serializer.deserialize(SessionRequest.kt:55)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.json.Json.decodeFromString(Json.kt:149)
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter.deserialize(KotlinxSerializationConverter.kt:71)
+	... 121 common frames omitted
+[1;31mERROR[0;39m ROOT {[32m2026-04-22 05:26:18.259[0;39m} [31mUnexpected exception thrown from route /api/v1/local/session
+[0;39mio.ktor.server.plugins.BadRequestException: Failed to convert request body to class org.coralprotocol.coralserver.session.SessionRequest
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.convertBody(RequestConverter.kt:69)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.access$convertBody(RequestConverter.kt:1)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invokeSuspend(RequestConverter.kt:40)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invoke(RequestConverter.kt)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invoke(RequestConverter.kt)
+	at io.ktor.server.application.OnCallReceiveContext.transformBody(KtorCallContexts.kt:76)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invokeSuspend(RequestConverter.kt:28)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invoke(RequestConverter.kt)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invoke(RequestConverter.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invokeSuspend(PluginBuilder.kt:190)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invokeSuspend(PluginBuilder.kt:125)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invokeSuspend(PluginBuilder.kt:245)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invokeSuspend(PluginBuilder.kt:228)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.util.debug.ContextUtilsKt.addToContextInDebugMode(ContextUtils.kt:34)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invokeSuspend(PluginBuilder.kt:224)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceedWith(SuspendFunctionGun.kt:99)
+	at io.ktor.server.auth.ReceiveBytes$install$1.invokeSuspend(AuthenticationInterceptors.kt:170)
+	at io.ktor.server.auth.ReceiveBytes$install$1.invoke(AuthenticationInterceptors.kt)
+	at io.ktor.server.auth.ReceiveBytes$install$1.invoke(AuthenticationInterceptors.kt)
+	at io.ktor.server.application.ApplicationPluginKt$addAllInterceptors$1$1$1.invokeSuspend(ApplicationPlugin.kt:209)
+	at io.ktor.server.application.ApplicationPluginKt$addAllInterceptors$1$1$1.invoke(ApplicationPlugin.kt)
+	at io.ktor.server.application.ApplicationPluginKt$addAllInterceptors$1$1$1.invoke(ApplicationPlugin.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:92)
+	at io.ktor.server.application.PipelineCall.receiveNullable$suspendImpl(PipelineCall.kt:118)
+	at io.ktor.server.application.PipelineCall.receiveNullable(PipelineCall.kt)
+	at io.ktor.server.routing.RoutingPipelineCall.receiveNullable(RoutingPipelineCall.kt:23)
+	at io.ktor.server.routing.RoutingCall.receiveNullable(RoutingNode.kt:245)
+	at org.coralprotocol.coralserver.routes.api.v1.SessionApiKt$localSessionApi$2.invokeSuspend(SessionApi.kt:458)
+	at org.coralprotocol.coralserver.routes.api.v1.SessionApiKt$localSessionApi$2.invoke(SessionApi.kt)
+	at org.coralprotocol.coralserver.routes.api.v1.SessionApiKt$localSessionApi$2.invoke(SessionApi.kt)
+	at io.ktor.server.resources.RoutingKt$handle$2.invokeSuspend(Routing.kt:299)
+	at io.ktor.server.resources.RoutingKt$handle$2.invoke(Routing.kt)
+	at io.ktor.server.resources.RoutingKt$handle$2.invoke(Routing.kt)
+	at io.ktor.server.routing.RoutingNode$buildPipeline$1$1.invokeSuspend(RoutingNode.kt:126)
+	at io.ktor.server.routing.RoutingNode$buildPipeline$1$1.invoke(RoutingNode.kt)
+	at io.ktor.server.routing.RoutingNode$buildPipeline$1$1.invoke(RoutingNode.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:92)
+	at io.ktor.server.routing.RoutingRoot$executeResult$$inlined$execute$1.invokeSuspend(Pipeline.kt:510)
+	at io.ktor.server.routing.RoutingRoot$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.routing.RoutingRoot$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:19)
+	at io.ktor.server.routing.RoutingRoot.executeResult(RoutingRoot.kt:212)
+	at io.ktor.server.routing.RoutingRoot.interceptor(RoutingRoot.kt:71)
+	at io.ktor.server.routing.RoutingRoot$Plugin$install$1.invokeSuspend(RoutingRoot.kt:157)
+	at io.ktor.server.routing.RoutingRoot$Plugin$install$1.invoke(RoutingRoot.kt)
+	at io.ktor.server.routing.RoutingRoot$Plugin$install$1.invoke(RoutingRoot.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:119)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.server.application.hooks.CallFailed$install$1$1.invokeSuspend(CommonHooks.kt:49)
+	at io.ktor.server.application.hooks.CallFailed$install$1$1.invoke(CommonHooks.kt)
+	at io.ktor.server.application.hooks.CallFailed$install$1$1.invoke(CommonHooks.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:286)
+	at io.ktor.server.application.hooks.CallFailed$install$1.invokeSuspend(CommonHooks.kt:48)
+	at io.ktor.server.application.hooks.CallFailed$install$1.invoke(CommonHooks.kt)
+	at io.ktor.server.application.hooks.CallFailed$install$1.invoke(CommonHooks.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:92)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:510)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:19)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invokeSuspend(DefaultEnginePipeline.kt:136)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.server.engine.BaseApplicationResponse$Companion$setupFallbackResponse$1.invokeSuspend(BaseApplicationResponse.kt:349)
+	at io.ktor.server.engine.BaseApplicationResponse$Companion$setupFallbackResponse$1.invoke(BaseApplicationResponse.kt)
+	at io.ktor.server.engine.BaseApplicationResponse$Companion$setupFallbackResponse$1.invoke(BaseApplicationResponse.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:92)
+	at io.ktor.server.cio.CIOApplicationEngine$handleRequest$2$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:510)
+	at io.ktor.server.cio.CIOApplicationEngine$handleRequest$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.cio.CIOApplicationEngine$handleRequest$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:19)
+	at io.ktor.server.cio.CIOApplicationEngine$handleRequest$2.invokeSuspend(CIOApplicationEngine.kt:256)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+Caused by: io.ktor.serialization.JsonConvertException: Illegal input: Field 'registrySourceId' is required for type with serial name 'org.coralprotocol.coralserver.agent.registry.RegistryAgentIdentifier', but it was missing at path: $.agentGraphRequest.agents[0].id
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter.deserialize(KotlinxSerializationConverter.kt:79)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.convertBody(RequestConverter.kt:67)
+	... 120 common frames omitted
+Caused by: kotlinx.serialization.MissingFieldException: Field 'registrySourceId' is required for type with serial name 'org.coralprotocol.coralserver.agent.registry.RegistryAgentIdentifier', but it was missing at path: $.agentGraphRequest.agents[0].id
+	at kotlinx.serialization.MissingFieldException.withNewMessageInternal$kotlinx_serialization_core(SerializationExceptions.kt:147)
+	at kotlinx.serialization.internal.JsonInternalDependenciesKt.missingFieldExceptionWithNewMessage(JsonInternalDependencies.kt:21)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:95)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at org.coralprotocol.coralserver.agent.graph.GraphAgentRequest$$serializer.deserialize(GraphAgentRequest.kt:18)
+	at org.coralprotocol.coralserver.agent.graph.GraphAgentRequest$$serializer.deserialize(GraphAgentRequest.kt:18)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
+	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.deserialize(CollectionSerializers.kt:43)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at org.coralprotocol.coralserver.agent.graph.AgentGraphRequest$$serializer.deserialize(AgentGraphRequest.kt:9)
+	at org.coralprotocol.coralserver.agent.graph.AgentGraphRequest$$serializer.deserialize(AgentGraphRequest.kt:9)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at org.coralprotocol.coralserver.session.SessionRequest$$serializer.deserialize(SessionRequest.kt:55)
+	at org.coralprotocol.coralserver.session.SessionRequest$$serializer.deserialize(SessionRequest.kt:55)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.json.Json.decodeFromString(Json.kt:149)
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter.deserialize(KotlinxSerializationConverter.kt:71)
+	... 121 common frames omitted
+Caused by: kotlinx.serialization.MissingFieldException: Field 'registrySourceId' is required for type with serial name 'org.coralprotocol.coralserver.agent.registry.RegistryAgentIdentifier', but it was missing
+	at kotlinx.serialization.internal.PluginExceptionsKt.throwMissingFieldException(PluginExceptions.kt:20)
+	at org.coralprotocol.coralserver.agent.registry.RegistryAgentIdentifier.<init>(RegistryAgentIdentifier.kt:6)
+	at org.coralprotocol.coralserver.agent.registry.RegistryAgentIdentifier$$serializer.deserialize(RegistryAgentIdentifier.kt:6)
+	at org.coralprotocol.coralserver.agent.registry.RegistryAgentIdentifier$$serializer.deserialize(RegistryAgentIdentifier.kt:6)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	... 150 common frames omitted
+[1;31mERROR[0;39m ROOT {[32m2026-04-22 05:26:35.734[0;39m} [31mUnexpected exception thrown from route /api/v1/local/session
+[0;39mio.ktor.server.plugins.BadRequestException: Failed to convert request body to class org.coralprotocol.coralserver.session.SessionRequest
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.convertBody(RequestConverter.kt:69)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.access$convertBody(RequestConverter.kt:1)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invokeSuspend(RequestConverter.kt:40)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invoke(RequestConverter.kt)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1$1.invoke(RequestConverter.kt)
+	at io.ktor.server.application.OnCallReceiveContext.transformBody(KtorCallContexts.kt:76)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invokeSuspend(RequestConverter.kt:28)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invoke(RequestConverter.kt)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt$convertRequestBody$1.invoke(RequestConverter.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invokeSuspend(PluginBuilder.kt:190)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$3.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invokeSuspend(PluginBuilder.kt:125)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onCallReceive$2.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invokeSuspend(PluginBuilder.kt:245)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhase$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invokeSuspend(PluginBuilder.kt:228)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.util.debug.ContextUtilsKt.addToContextInDebugMode(ContextUtils.kt:34)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invokeSuspend(PluginBuilder.kt:224)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.server.application.PluginBuilder$onDefaultPhaseWithMessage$1$1.invoke(PluginBuilder.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceedWith(SuspendFunctionGun.kt:99)
+	at io.ktor.server.auth.ReceiveBytes$install$1.invokeSuspend(AuthenticationInterceptors.kt:170)
+	at io.ktor.server.auth.ReceiveBytes$install$1.invoke(AuthenticationInterceptors.kt)
+	at io.ktor.server.auth.ReceiveBytes$install$1.invoke(AuthenticationInterceptors.kt)
+	at io.ktor.server.application.ApplicationPluginKt$addAllInterceptors$1$1$1.invokeSuspend(ApplicationPlugin.kt:209)
+	at io.ktor.server.application.ApplicationPluginKt$addAllInterceptors$1$1$1.invoke(ApplicationPlugin.kt)
+	at io.ktor.server.application.ApplicationPluginKt$addAllInterceptors$1$1$1.invoke(ApplicationPlugin.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:92)
+	at io.ktor.server.application.PipelineCall.receiveNullable$suspendImpl(PipelineCall.kt:118)
+	at io.ktor.server.application.PipelineCall.receiveNullable(PipelineCall.kt)
+	at io.ktor.server.routing.RoutingPipelineCall.receiveNullable(RoutingPipelineCall.kt:23)
+	at io.ktor.server.routing.RoutingCall.receiveNullable(RoutingNode.kt:245)
+	at org.coralprotocol.coralserver.routes.api.v1.SessionApiKt$localSessionApi$2.invokeSuspend(SessionApi.kt:458)
+	at org.coralprotocol.coralserver.routes.api.v1.SessionApiKt$localSessionApi$2.invoke(SessionApi.kt)
+	at org.coralprotocol.coralserver.routes.api.v1.SessionApiKt$localSessionApi$2.invoke(SessionApi.kt)
+	at io.ktor.server.resources.RoutingKt$handle$2.invokeSuspend(Routing.kt:299)
+	at io.ktor.server.resources.RoutingKt$handle$2.invoke(Routing.kt)
+	at io.ktor.server.resources.RoutingKt$handle$2.invoke(Routing.kt)
+	at io.ktor.server.routing.RoutingNode$buildPipeline$1$1.invokeSuspend(RoutingNode.kt:126)
+	at io.ktor.server.routing.RoutingNode$buildPipeline$1$1.invoke(RoutingNode.kt)
+	at io.ktor.server.routing.RoutingNode$buildPipeline$1$1.invoke(RoutingNode.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:92)
+	at io.ktor.server.routing.RoutingRoot$executeResult$$inlined$execute$1.invokeSuspend(Pipeline.kt:510)
+	at io.ktor.server.routing.RoutingRoot$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.routing.RoutingRoot$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:19)
+	at io.ktor.server.routing.RoutingRoot.executeResult(RoutingRoot.kt:212)
+	at io.ktor.server.routing.RoutingRoot.interceptor(RoutingRoot.kt:71)
+	at io.ktor.server.routing.RoutingRoot$Plugin$install$1.invokeSuspend(RoutingRoot.kt:157)
+	at io.ktor.server.routing.RoutingRoot$Plugin$install$1.invoke(RoutingRoot.kt)
+	at io.ktor.server.routing.RoutingRoot$Plugin$install$1.invoke(RoutingRoot.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:119)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.server.application.hooks.CallFailed$install$1$1.invokeSuspend(CommonHooks.kt:49)
+	at io.ktor.server.application.hooks.CallFailed$install$1$1.invoke(CommonHooks.kt)
+	at io.ktor.server.application.hooks.CallFailed$install$1$1.invoke(CommonHooks.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:286)
+	at io.ktor.server.application.hooks.CallFailed$install$1.invokeSuspend(CommonHooks.kt:48)
+	at io.ktor.server.application.hooks.CallFailed$install$1.invoke(CommonHooks.kt)
+	at io.ktor.server.application.hooks.CallFailed$install$1.invoke(CommonHooks.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:92)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:510)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:19)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invokeSuspend(DefaultEnginePipeline.kt:136)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.server.engine.BaseApplicationResponse$Companion$setupFallbackResponse$1.invokeSuspend(BaseApplicationResponse.kt:349)
+	at io.ktor.server.engine.BaseApplicationResponse$Companion$setupFallbackResponse$1.invoke(BaseApplicationResponse.kt)
+	at io.ktor.server.engine.BaseApplicationResponse$Companion$setupFallbackResponse$1.invoke(BaseApplicationResponse.kt)
+	at io.ktor.util.pipeline.PipelineJvmKt.pipelineStartCoroutineUninterceptedOrReturn(PipelineJvm.kt:15)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:131)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:89)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:92)
+	at io.ktor.server.cio.CIOApplicationEngine$handleRequest$2$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:510)
+	at io.ktor.server.cio.CIOApplicationEngine$handleRequest$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.cio.CIOApplicationEngine$handleRequest$2$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:19)
+	at io.ktor.server.cio.CIOApplicationEngine$handleRequest$2.invokeSuspend(CIOApplicationEngine.kt:256)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+Caused by: io.ktor.serialization.JsonConvertException: Illegal input: Expected JsonObject, but had JsonLiteral as the serialized body of org.coralprotocol.coralserver.agent.registry.AgentRegistrySourceIdentifier at element: $.agentGraphRequest.agents[0].id.registrySourceId
+JSON input: "local"
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter.deserialize(KotlinxSerializationConverter.kt:79)
+	at io.ktor.server.plugins.contentnegotiation.RequestConverterKt.convertBody(RequestConverter.kt:67)
+	... 120 common frames omitted
+Caused by: kotlinx.serialization.json.internal.JsonDecodingException: Expected JsonObject, but had JsonLiteral as the serialized body of org.coralprotocol.coralserver.agent.registry.AgentRegistrySourceIdentifier at element: $.agentGraphRequest.agents[0].id.registrySourceId
+JSON input: "local"
+	at kotlinx.serialization.json.internal.JsonExceptionsKt.JsonDecodingException(JsonExceptions.kt:24)
+	at kotlinx.serialization.json.internal.JsonExceptionsKt.JsonDecodingException(JsonExceptions.kt:32)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:400)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at org.coralprotocol.coralserver.agent.registry.RegistryAgentIdentifier$$serializer.deserialize(RegistryAgentIdentifier.kt:6)
+	at org.coralprotocol.coralserver.agent.registry.RegistryAgentIdentifier$$serializer.deserialize(RegistryAgentIdentifier.kt:6)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at org.coralprotocol.coralserver.agent.graph.GraphAgentRequest$$serializer.deserialize(GraphAgentRequest.kt:18)
+	at org.coralprotocol.coralserver.agent.graph.GraphAgentRequest$$serializer.deserialize(GraphAgentRequest.kt:18)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
+	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.deserialize(CollectionSerializers.kt:43)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at org.coralprotocol.coralserver.agent.graph.AgentGraphRequest$$serializer.deserialize(AgentGraphRequest.kt:9)
+	at org.coralprotocol.coralserver.agent.graph.AgentGraphRequest$$serializer.deserialize(AgentGraphRequest.kt:9)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at org.coralprotocol.coralserver.session.SessionRequest$$serializer.deserialize(SessionRequest.kt:55)
+	at org.coralprotocol.coralserver.session.SessionRequest$$serializer.deserialize(SessionRequest.kt:55)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.json.Json.decodeFromString(Json.kt:149)
+	at io.ktor.serialization.kotlinx.KotlinxSerializationConverter.deserialize(KotlinxSerializationConverter.kt:71)
+	... 121 common frames omitted
+[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.132[0;39m} [39msession "ccfd1d4a-fefc-488d-bdda-bad3559c09c6" was created in "seo-swarm-e2e" with immediate execution
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.136[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mExecuting "/home/user/computer/coral-seo-swarm-k2.6/agents/keyword-researcher/./gradlew" with arguments: "run"
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.136[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mExecuting "/home/user/computer/coral-seo-swarm-k2.6/agents/draft-polisher/./gradlew" with arguments: "run"
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.136[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mExecuting "/home/user/computer/coral-seo-swarm-k2.6/agents/content-strategist/./gradlew" with arguments: "run"
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.139[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "MAX_ITERATIONS" = "0" for agent MAX_ITERATIONS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.139[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "MAX_ITERATIONS" = "0" for agent MAX_ITERATIONS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.139[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "MAX_ITERATIONS" = "0" for agent MAX_ITERATIONS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "ITERATION_DELAY_MS" = "0" for agent ITERATION_DELAY_MS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "ITERATION_DELAY_MS" = "0" for agent ITERATION_DELAY_MS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "ITERATION_DELAY_MS" = "0" for agent ITERATION_DELAY_MS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "MAX_TOKENS" = "150000" for agent MAX_TOKENS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "MAX_TOKENS" = "150000" for agent MAX_TOKENS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "MAX_TOKENS" = "150000" for agent MAX_TOKENS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "EXTRA_SYSTEM_PROMPT" = "You are the writer and on-page optimizer in a 3-agent SEO team. Turn briefs into clear, compelling drafts with strong structure, scannability, entity coverage, and on-page SEO hygiene. Ask the strategist for missing constraints rather than guessing." for agent EXTRA_SYSTEM_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "EXTRA_SYSTEM_PROMPT" = "You are the content strategist in a 3-agent SEO team. Convert research into a content brief, outline, angle, audience framing, entity coverage, and internal link recommendations. Pull in the researcher when evidence is missing and mention the writer when the brief is ready." for agent EXTRA_SYSTEM_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "EXTRA_SYSTEM_PROMPT" = "You are the keyword researcher in a 3-agent SEO team. Own search intent analysis, keyword clustering, SERP pattern discovery, competitor signal extraction, and opportunity framing. Create threads for findings when useful and mention the strategist with concise, structured takeaways. Do not draft the final article unless specifically asked." for agent EXTRA_SYSTEM_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "EXTRA_INITIAL_USER_PROMPT" = "Inspect the available agents and coordinate proactively. When a brief exists, draft or revise content with crisp headings, natural keyword usage, and readable flow. If no brief exists, request one from the strategist." for agent EXTRA_INITIAL_USER_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "EXTRA_INITIAL_USER_PROMPT" = "Inspect the available agents and coordinate proactively. Turn incoming research into a high-clarity content brief with heading structure, search intent alignment, entity coverage, and conversion-aware recommendations." for agent EXTRA_INITIAL_USER_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "EXTRA_INITIAL_USER_PROMPT" = "Inspect the available agents and collaborate proactively. For SEO tasks, begin with search intent, primary keyword candidates, long-tail clusters, notable SERP patterns, and competitor observations. Share findings in a focused thread." for agent EXTRA_INITIAL_USER_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "FOLLOWUP_USER_PROMPT" = "[automated message] Continue coordinating as the writer and on-page specialist. Improve the draft, tighten copy, and flag missing research or strategy when needed." for agent FOLLOWUP_USER_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "FOLLOWUP_USER_PROMPT" = "[automated message] Continue coordinating as the content strategist. Refine the brief, resolve ambiguities, and keep the writer unblocked." for agent FOLLOWUP_USER_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "FOLLOWUP_USER_PROMPT" = "[automated message] Continue coordinating as the keyword and SERP research specialist. If another agent needs evidence, provide structured findings and mention them directly." for agent FOLLOWUP_USER_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "MODEL_PROVIDER" = "OPENAI" for agent MODEL_PROVIDER
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "MODEL_PROVIDER" = "OPENAI" for agent MODEL_PROVIDER
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "MODEL_PROVIDER" = "OPENAI" for agent MODEL_PROVIDER
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "MODEL_PROVIDER_URL_OVERRIDE" = "https://router.huggingface.co/v1" for agent MODEL_PROVIDER_URL_OVERRIDE
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "MODEL_PROVIDER_URL_OVERRIDE" = "https://router.huggingface.co/v1" for agent MODEL_PROVIDER_URL_OVERRIDE
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "MODEL_PROVIDER_URL_OVERRIDE" = "https://router.huggingface.co/v1" for agent MODEL_PROVIDER_URL_OVERRIDE
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "MODEL_ID" = "moonshotai/Kimi-K2.6:novita" for agent MODEL_ID
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "MODEL_ID" = "moonshotai/Kimi-K2.6:novita" for agent MODEL_ID
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "MODEL_ID" = "moonshotai/Kimi-K2.6:novita" for agent MODEL_ID
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "SYSTEM_PROMPT" = "You are an AI agent designed to assist users by leveraging available tools and resources. Follow the user's instructions carefully and use the tools at your disposal to provide accurate, useful responses.
+-- Start of messages and status --
+<resource>coral://instruction</resource>
+<resource>coral://state</resource>
+-- End of messages and status --
+" for agent SYSTEM_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "SYSTEM_PROMPT" = "You are an AI agent designed to assist users by leveraging available tools and resources. Follow the user's instructions carefully and use the tools at your disposal to provide accurate, useful responses.
+-- Start of messages and status --
+<resource>coral://instruction</resource>
+<resource>coral://state</resource>
+-- End of messages and status --
+" for agent SYSTEM_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "SYSTEM_PROMPT" = "You are an AI agent designed to assist users by leveraging available tools and resources. Follow the user's instructions carefully and use the tools at your disposal to provide accurate, useful responses.
+-- Start of messages and status --
+<resource>coral://instruction</resource>
+<resource>coral://state</resource>
+-- End of messages and status --
+" for agent SYSTEM_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "MODEL_API_KEY" = "************************" for agent MODEL_API_KEY
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "MODEL_API_KEY" = "************************" for agent MODEL_API_KEY
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:39.140[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "MODEL_API_KEY" = "************************" for agent MODEL_API_KEY
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:39.998[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mWARNING: A restricted method in java.lang.System has been called
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:39.998[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mWARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/root/.gradle/wrapper/dists/gradle-9.0.0-bin/d6wjpkvcgsg3oed0qlfss3wgl/gradle-9.0.0/lib/native-platform-0.22-milestone-28.jar)
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:39.998[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:39.998[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mWARNING: Restricted methods will be blocked in a future release unless native access is enabled
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:39.998[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:40.019[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mWARNING: A restricted method in java.lang.System has been called
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:40.020[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mWARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/root/.gradle/wrapper/dists/gradle-9.0.0-bin/d6wjpkvcgsg3oed0qlfss3wgl/gradle-9.0.0/lib/native-platform-0.22-milestone-28.jar)
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:40.020[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:40.020[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mWARNING: Restricted methods will be blocked in a future release unless native access is enabled
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:40.020[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:40.198[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mWARNING: A restricted method in java.lang.System has been called
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:40.199[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mWARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/root/.gradle/wrapper/dists/gradle-9.0.0-bin/d6wjpkvcgsg3oed0qlfss3wgl/gradle-9.0.0/lib/native-platform-0.22-milestone-28.jar)
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:40.199[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:40.199[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mWARNING: Restricted methods will be blocked in a future release unless native access is enabled
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:27:40.199[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:40.394[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstdout[m] [39mStarting a Gradle Daemon (subsequent builds will be faster)
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:40.419[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstdout[m] [39mStarting a Gradle Daemon (subsequent builds will be faster)
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:40.617[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39mStarting a Gradle Daemon (subsequent builds will be faster)
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:27:52.293[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstdout[m] [39m> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:10.418[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39m> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:14.894[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstdout[m] [39m> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:22.392[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstdout[m] [39m> Task :compileKotlin
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:28.519[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstdout[m] [39m> Task :processResources NO-SOURCE
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:28.893[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstdout[m] [39m> Task :processResources NO-SOURCE
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:29.117[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39m> Task :processResources NO-SOURCE
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:37.317[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.318[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/content-strategist/src/main/kotlin/seo/swarm/strategy/util/models.kt:28:24 Argument type mismatch: actual type is 'List<Any>', but 'List<LLMCapability>?' was expected.
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:37.318[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39m> Task :compileKotlin FAILED
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.318[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/content-strategist/src/main/kotlin/seo/swarm/strategy/util/models.kt:30:27 Unresolved reference 'Tool'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.318[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/content-strategist/src/main/kotlin/seo/swarm/strategy/util/models.kt:32:34 Unresolved reference 'StrictJSON'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.318[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/content-strategist/src/main/kotlin/seo/swarm/strategy/util/models.kt:34:25 Argument type mismatch: actual type is 'Int', but 'Long?' was expected.
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:37.319[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstdout[m] [39m
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:37.320[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstdout[m] [39m> Task :compileKotlin FAILED
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.320[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/keyword-researcher/src/main/kotlin/seo/swarm/keyword/util/models.kt:28:24 Argument type mismatch: actual type is 'List<Any>', but 'List<LLMCapability>?' was expected.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.320[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/keyword-researcher/src/main/kotlin/seo/swarm/keyword/util/models.kt:30:27 Unresolved reference 'Tool'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.320[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/keyword-researcher/src/main/kotlin/seo/swarm/keyword/util/models.kt:32:34 Unresolved reference 'StrictJSON'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.321[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/keyword-researcher/src/main/kotlin/seo/swarm/keyword/util/models.kt:34:25 Argument type mismatch: actual type is 'Int', but 'Long?' was expected.
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:37.393[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstdout[m] [39m
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:37.394[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstdout[m] [39m> Task :compileKotlin FAILED
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.394[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/draft-polisher/src/main/kotlin/seo/swarm/writer/util/models.kt:28:24 Argument type mismatch: actual type is 'List<Any>', but 'List<LLMCapability>?' was expected.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.394[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/draft-polisher/src/main/kotlin/seo/swarm/writer/util/models.kt:30:27 Unresolved reference 'Tool'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.394[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/draft-polisher/src/main/kotlin/seo/swarm/writer/util/models.kt:32:34 Unresolved reference 'StrictJSON'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.394[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/draft-polisher/src/main/kotlin/seo/swarm/writer/util/models.kt:34:25 Argument type mismatch: actual type is 'Int', but 'Long?' was expected.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.493[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:37.493[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstdout[m] [39m1 actionable task: 1 executed
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.493[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mFAILURE: Build failed with an exception.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.493[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.493[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m* What went wrong:
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.493[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mExecution failed for task ':compileKotlin'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.494[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.494[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m   > Compilation error. See log for more details
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.494[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.494[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m* Try:
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.494[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m> Run with --stacktrace option to get the stack trace.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.494[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m> Run with --info or --debug option to get more log output.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.494[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m> Run with --scan to generate a Build Scan (Powered by Develocity).
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.494[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m> Get more help at https://help.gradle.org.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.494[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.494[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mBUILD FAILED in 58s
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.517[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.517[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mFAILURE: Build failed with an exception.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.517[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.517[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m* What went wrong:
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:37.517[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39m1 actionable task: 1 executed
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.518[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mExecution failed for task ':compileKotlin'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.518[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.518[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m   > Compilation error. See log for more details
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.518[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.518[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m* Try:
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.518[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m> Run with --stacktrace option to get the stack trace.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.518[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m> Run with --info or --debug option to get more log output.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.518[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m> Run with --scan to generate a Build Scan (Powered by Develocity).
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.518[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m> Get more help at https://help.gradle.org.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.518[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.518[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mBUILD FAILED in 58s
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.519[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:37.519[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstdout[m] [39m1 actionable task: 1 executed
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.519[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mFAILURE: Build failed with an exception.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.519[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.519[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m* What went wrong:
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.519[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mExecution failed for task ':compileKotlin'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.519[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.519[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m   > Compilation error. See log for more details
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.519[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.520[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m* Try:
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.520[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m> Run with --stacktrace option to get the stack trace.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.520[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m> Run with --info or --debug option to get more log output.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.520[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m> Run with --scan to generate a Build Scan (Powered by Develocity).
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.591[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m> Get more help at https://help.gradle.org.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.592[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:37.592[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mBUILD FAILED in 58s
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:38.120[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [33mexited with code 1
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:38.121[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mdraft-polisher[m] [39mAgent draft-polisher runtime exited
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:38.123[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [33mexited with code 1
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:38.124[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mcontent-strategist[m] [39mAgent content-strategist runtime exited
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:28:38.147[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [33mexited with code 1
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:38.147[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94mccfd1d4a-fefc-488d-bdda-bad3559c09c6[m, [95magent[m=[94mkeyword-researcher[m] [39mAgent keyword-researcher runtime exited
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:28:38.149[0;39m} [39mholding session ccfd1d4a-fefc-488d-bdda-bad3559c09c6 in memory for 1m
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.175[0;39m} [39msession "61b1a3b0-6753-47f7-9193-fe2436cc48b5" was created in "seo-swarm-e2e" with immediate execution
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.176[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mExecuting "/home/user/computer/coral-seo-swarm-k2.6/agents/keyword-researcher/./gradlew" with arguments: "run"
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.176[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mExecuting "/home/user/computer/coral-seo-swarm-k2.6/agents/draft-polisher/./gradlew" with arguments: "run"
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.176[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mExecuting "/home/user/computer/coral-seo-swarm-k2.6/agents/content-strategist/./gradlew" with arguments: "run"
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.176[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "MAX_ITERATIONS" = "0" for agent MAX_ITERATIONS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.176[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "MAX_ITERATIONS" = "0" for agent MAX_ITERATIONS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.176[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "ITERATION_DELAY_MS" = "0" for agent ITERATION_DELAY_MS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.176[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "MAX_ITERATIONS" = "0" for agent MAX_ITERATIONS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.176[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "ITERATION_DELAY_MS" = "0" for agent ITERATION_DELAY_MS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.176[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "MAX_TOKENS" = "150000" for agent MAX_TOKENS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "MAX_TOKENS" = "150000" for agent MAX_TOKENS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "ITERATION_DELAY_MS" = "0" for agent ITERATION_DELAY_MS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "EXTRA_SYSTEM_PROMPT" = "You are the keyword researcher in a 3-agent SEO team. Own search intent analysis, keyword clustering, SERP pattern discovery, competitor signal extraction, and opportunity framing. Create threads for findings when useful and mention the strategist with concise, structured takeaways. Do not draft the final article unless specifically asked." for agent EXTRA_SYSTEM_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "EXTRA_SYSTEM_PROMPT" = "You are the writer and on-page optimizer in a 3-agent SEO team. Turn briefs into clear, compelling drafts with strong structure, scannability, entity coverage, and on-page SEO hygiene. Ask the strategist for missing constraints rather than guessing." for agent EXTRA_SYSTEM_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "MAX_TOKENS" = "150000" for agent MAX_TOKENS
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "EXTRA_INITIAL_USER_PROMPT" = "Inspect the available agents and collaborate proactively. For SEO tasks, begin with search intent, primary keyword candidates, long-tail clusters, notable SERP patterns, and competitor observations. Share findings in a focused thread." for agent EXTRA_INITIAL_USER_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "EXTRA_INITIAL_USER_PROMPT" = "Inspect the available agents and coordinate proactively. When a brief exists, draft or revise content with crisp headings, natural keyword usage, and readable flow. If no brief exists, request one from the strategist." for agent EXTRA_INITIAL_USER_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "FOLLOWUP_USER_PROMPT" = "[automated message] Continue coordinating as the keyword and SERP research specialist. If another agent needs evidence, provide structured findings and mention them directly." for agent FOLLOWUP_USER_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "EXTRA_SYSTEM_PROMPT" = "You are the content strategist in a 3-agent SEO team. Convert research into a content brief, outline, angle, audience framing, entity coverage, and internal link recommendations. Pull in the researcher when evidence is missing and mention the writer when the brief is ready." for agent EXTRA_SYSTEM_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "FOLLOWUP_USER_PROMPT" = "[automated message] Continue coordinating as the writer and on-page specialist. Improve the draft, tighten copy, and flag missing research or strategy when needed." for agent FOLLOWUP_USER_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "MODEL_PROVIDER" = "OPENAI" for agent MODEL_PROVIDER
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "EXTRA_INITIAL_USER_PROMPT" = "Inspect the available agents and coordinate proactively. Turn incoming research into a high-clarity content brief with heading structure, search intent alignment, entity coverage, and conversion-aware recommendations." for agent EXTRA_INITIAL_USER_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "MODEL_PROVIDER" = "OPENAI" for agent MODEL_PROVIDER
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "MODEL_PROVIDER_URL_OVERRIDE" = "https://router.huggingface.co/v1" for agent MODEL_PROVIDER_URL_OVERRIDE
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "FOLLOWUP_USER_PROMPT" = "[automated message] Continue coordinating as the content strategist. Refine the brief, resolve ambiguities, and keep the writer unblocked." for agent FOLLOWUP_USER_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "MODEL_PROVIDER_URL_OVERRIDE" = "https://router.huggingface.co/v1" for agent MODEL_PROVIDER_URL_OVERRIDE
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "MODEL_ID" = "moonshotai/Kimi-K2.6:novita" for agent MODEL_ID
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "MODEL_ID" = "moonshotai/Kimi-K2.6:novita" for agent MODEL_ID
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "SYSTEM_PROMPT" = "You are an AI agent designed to assist users by leveraging available tools and resources. Follow the user's instructions carefully and use the tools at your disposal to provide accurate, useful responses.
+-- Start of messages and status --
+<resource>coral://instruction</resource>
+<resource>coral://state</resource>
+-- End of messages and status --
+" for agent SYSTEM_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "MODEL_PROVIDER" = "OPENAI" for agent MODEL_PROVIDER
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "SYSTEM_PROMPT" = "You are an AI agent designed to assist users by leveraging available tools and resources. Follow the user's instructions carefully and use the tools at your disposal to provide accurate, useful responses.
+-- Start of messages and status --
+<resource>coral://instruction</resource>
+<resource>coral://state</resource>
+-- End of messages and status --
+" for agent SYSTEM_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mSetting option "MODEL_API_KEY" = "************************" for agent MODEL_API_KEY
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mSetting option "MODEL_API_KEY" = "************************" for agent MODEL_API_KEY
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "MODEL_PROVIDER_URL_OVERRIDE" = "https://router.huggingface.co/v1" for agent MODEL_PROVIDER_URL_OVERRIDE
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "MODEL_ID" = "moonshotai/Kimi-K2.6:novita" for agent MODEL_ID
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.177[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "SYSTEM_PROMPT" = "You are an AI agent designed to assist users by leveraging available tools and resources. Follow the user's instructions carefully and use the tools at your disposal to provide accurate, useful responses.
+-- Start of messages and status --
+<resource>coral://instruction</resource>
+<resource>coral://state</resource>
+-- End of messages and status --
+" for agent SYSTEM_PROMPT
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:20.178[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mSetting option "MODEL_API_KEY" = "************************" for agent MODEL_API_KEY
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:20.718[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mWARNING: A restricted method in java.lang.System has been called
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:20.719[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mWARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/root/.gradle/wrapper/dists/gradle-9.0.0-bin/d6wjpkvcgsg3oed0qlfss3wgl/gradle-9.0.0/lib/native-platform-0.22-milestone-28.jar)
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:20.719[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:20.719[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mWARNING: Restricted methods will be blocked in a future release unless native access is enabled
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:20.719[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:21.123[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mWARNING: A restricted method in java.lang.System has been called
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:21.123[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mWARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/root/.gradle/wrapper/dists/gradle-9.0.0-bin/d6wjpkvcgsg3oed0qlfss3wgl/gradle-9.0.0/lib/native-platform-0.22-milestone-28.jar)
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:21.123[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:21.124[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mWARNING: Restricted methods will be blocked in a future release unless native access is enabled
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:21.124[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:21.503[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mWARNING: A restricted method in java.lang.System has been called
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:21.503[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mWARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/root/.gradle/wrapper/dists/gradle-9.0.0-bin/d6wjpkvcgsg3oed0qlfss3wgl/gradle-9.0.0/lib/native-platform-0.22-milestone-28.jar)
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:21.503[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:21.503[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mWARNING: Restricted methods will be blocked in a future release unless native access is enabled
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:21.504[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:21.792[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstdout[m] [39m> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:21.811[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstdout[m] [39mStarting a Gradle Daemon, 1 busy and 2 stopped Daemons could not be reused, use --status for details
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:22.295[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39mStarting a Gradle Daemon, 1 busy and 2 stopped Daemons could not be reused, use --status for details
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:22.337[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstdout[m] [39m> Task :processResources NO-SOURCE
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:26.092[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstdout[m] [39m
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:26.092[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstdout[m] [39m> Task :compileKotlin FAILED
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.092[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/keyword-researcher/src/main/kotlin/seo/swarm/keyword/util/models.kt:28:24 Argument type mismatch: actual type is 'List<Any>', but 'List<LLMCapability>?' was expected.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/keyword-researcher/src/main/kotlin/seo/swarm/keyword/util/models.kt:30:27 Unresolved reference 'Tool'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/keyword-researcher/src/main/kotlin/seo/swarm/keyword/util/models.kt:32:34 Unresolved reference 'StrictJSON'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/keyword-researcher/src/main/kotlin/seo/swarm/keyword/util/models.kt:34:25 Argument type mismatch: actual type is 'Int', but 'Long?' was expected.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mFAILURE: Build failed with an exception.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m* What went wrong:
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mExecution failed for task ':compileKotlin'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m   > Compilation error. See log for more details
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m* Try:
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.093[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m> Run with --stacktrace option to get the stack trace.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.094[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m> Run with --info or --debug option to get more log output.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.094[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m> Run with --scan to generate a Build Scan (Powered by Develocity).
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.094[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m> Get more help at https://help.gradle.org.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.094[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.094[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstderr[m] [33mBUILD FAILED in 5s
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:26.094[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m, [95mio[m=[94mstdout[m] [39m1 actionable task: 1 executed
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:26.204[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [33mexited with code 1
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:26.205[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mkeyword-researcher[m] [39mAgent keyword-researcher runtime exited
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:32.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstdout[m] [39m> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:34.510[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstdout[m] [39m> Task :processResources NO-SOURCE
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:35.223[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39m> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:36.810[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstdout[m] [39m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.811[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/draft-polisher/src/main/kotlin/seo/swarm/writer/util/models.kt:28:24 Argument type mismatch: actual type is 'List<Any>', but 'List<LLMCapability>?' was expected.
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:36.811[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstdout[m] [39m> Task :compileKotlin FAILED
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.811[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/draft-polisher/src/main/kotlin/seo/swarm/writer/util/models.kt:30:27 Unresolved reference 'Tool'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.811[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/draft-polisher/src/main/kotlin/seo/swarm/writer/util/models.kt:32:34 Unresolved reference 'StrictJSON'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.811[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/draft-polisher/src/main/kotlin/seo/swarm/writer/util/models.kt:34:25 Argument type mismatch: actual type is 'Int', but 'Long?' was expected.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.910[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.910[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mFAILURE: Build failed with an exception.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.910[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.910[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m* What went wrong:
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mExecution failed for task ':compileKotlin'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m   > Compilation error. See log for more details
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:36.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstdout[m] [39m1 actionable task: 1 executed
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m* Try:
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m> Run with --stacktrace option to get the stack trace.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m> Run with --info or --debug option to get more log output.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m> Run with --scan to generate a Build Scan (Powered by Develocity).
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m> Get more help at https://help.gradle.org.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:36.911[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m, [95mio[m=[94mstderr[m] [33mBUILD FAILED in 16s
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:36.923[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39m> Task :processResources NO-SOURCE
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:37.404[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [33mexited with code 1
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:37.405[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mdraft-polisher[m] [39mAgent draft-polisher runtime exited
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:38.150[0;39m} [39msession ccfd1d4a-fefc-488d-bdda-bad3559c09c6 closed
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:38.423[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.423[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/content-strategist/src/main/kotlin/seo/swarm/strategy/util/models.kt:28:24 Argument type mismatch: actual type is 'List<Any>', but 'List<LLMCapability>?' was expected.
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:38.423[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39m> Task :compileKotlin
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.423[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/content-strategist/src/main/kotlin/seo/swarm/strategy/util/models.kt:30:27 Unresolved reference 'Tool'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.423[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/content-strategist/src/main/kotlin/seo/swarm/strategy/util/models.kt:32:34 Unresolved reference 'StrictJSON'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.423[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33me: file:///home/user/computer/coral-seo-swarm-k2.6/agents/content-strategist/src/main/kotlin/seo/swarm/strategy/util/models.kt:34:25 Argument type mismatch: actual type is 'Int', but 'Long?' was expected.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mFAILURE: Build failed with an exception.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39m> Task :compileKotlin FAILED
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m* What went wrong:
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mExecution failed for task ':compileKotlin'.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m   > Compilation error. See log for more details
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m* Try:
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m> Run with --stacktrace option to get the stack trace.
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstdout[m] [39m1 actionable task: 1 executed
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m> Run with --info or --debug option to get more log output.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m> Run with --scan to generate a Build Scan (Powered by Develocity).
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m> Get more help at https://help.gradle.org.
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33m
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:38.523[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m, [95mio[m=[94mstderr[m] [33mBUILD FAILED in 18s
+[0;39m[31m WARN[0;39m ROOT {[32m2026-04-22 05:29:39.020[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [33mexited with code 1
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:39.020[0;39m} [[95mns[m=[94mseo-swarm-e2e[m, [95msid[m=[94m61b1a3b0-6753-47f7-9193-fe2436cc48b5[m, [95magent[m=[94mcontent-strategist[m] [39mAgent content-strategist runtime exited
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:29:39.020[0;39m} [39mholding session 61b1a3b0-6753-47f7-9193-fe2436cc48b5 in memory for 1m
+[0;39m[34m INFO[0;39m ROOT {[32m2026-04-22 05:30:39.021[0;39m} [39msession 61b1a3b0-6753-47f7-9193-fe2436cc48b5 closed
+[0;39m

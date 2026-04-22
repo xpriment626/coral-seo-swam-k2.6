@@ -26,7 +26,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("com.emmettchilds.coralseoswarmk26.strategy.MainKt")
+    mainClass.set("seo.swarm.strategy.MainKt")
 }
 
 graalvmNative {
@@ -34,7 +34,7 @@ graalvmNative {
     binaries {
         named("main") {
             imageName.set("content-strategist")
-            mainClass.set("com.emmettchilds.coralseoswarmk26.strategy.MainKt")
+            mainClass.set("seo.swarm.strategy.MainKt")
             buildArgs.addAll(
                 listOf(
                     "--no-fallback",

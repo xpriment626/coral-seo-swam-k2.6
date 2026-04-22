@@ -13,7 +13,8 @@
           "MODEL_PROVIDER": { "type": "string", "value": "OPENAI" },
           "MODEL_PROVIDER_URL_OVERRIDE": { "type": "string", "value": "https://router.huggingface.co/v1" },
           "MODEL_ID": { "type": "string", "value": "moonshotai/Kimi-K2.6:novita" },
-          "MODEL_API_KEY": { "type": "string", "value": "YOUR_HF_TOKEN" }
+          "MODEL_API_KEY": { "type": "string", "value": "hf_bootstrap_placeholder" },
+          "MAX_ITERATIONS": { "type": "u32", "value": 0 }
         }
       },
       {
@@ -28,7 +29,8 @@
           "MODEL_PROVIDER": { "type": "string", "value": "OPENAI" },
           "MODEL_PROVIDER_URL_OVERRIDE": { "type": "string", "value": "https://router.huggingface.co/v1" },
           "MODEL_ID": { "type": "string", "value": "moonshotai/Kimi-K2.6:novita" },
-          "MODEL_API_KEY": { "type": "string", "value": "YOUR_HF_TOKEN" }
+          "MODEL_API_KEY": { "type": "string", "value": "hf_bootstrap_placeholder" },
+          "MAX_ITERATIONS": { "type": "u32", "value": 0 }
         }
       },
       {
@@ -43,7 +45,8 @@
           "MODEL_PROVIDER": { "type": "string", "value": "OPENAI" },
           "MODEL_PROVIDER_URL_OVERRIDE": { "type": "string", "value": "https://router.huggingface.co/v1" },
           "MODEL_ID": { "type": "string", "value": "moonshotai/Kimi-K2.6:novita" },
-          "MODEL_API_KEY": { "type": "string", "value": "YOUR_HF_TOKEN" }
+          "MODEL_API_KEY": { "type": "string", "value": "hf_bootstrap_placeholder" },
+          "MAX_ITERATIONS": { "type": "u32", "value": 0 }
         }
       }
     ],
@@ -54,7 +57,7 @@
   "namespaceProvider": {
     "type": "create_if_not_exists",
     "namespaceRequest": {
-      "name": "seo-swarm",
+      "name": "seo-swarm-e2e",
       "deleteOnLastSessionExit": true
     }
   },

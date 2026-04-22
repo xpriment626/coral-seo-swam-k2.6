@@ -26,7 +26,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("com.emmettchilds.coralseoswarmk26.keyword.MainKt")
+    mainClass.set("seo.swarm.keyword.MainKt")
 }
 
 graalvmNative {
@@ -34,7 +34,7 @@ graalvmNative {
     binaries {
         named("main") {
             imageName.set("keyword-researcher")
-            mainClass.set("com.emmettchilds.coralseoswarmk26.keyword.MainKt")
+            mainClass.set("seo.swarm.keyword.MainKt")
             buildArgs.addAll(
                 listOf(
                     "--no-fallback",

@@ -26,7 +26,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("com.emmettchilds.coralseoswarmk26.writer.MainKt")
+    mainClass.set("seo.swarm.writer.MainKt")
 }
 
 graalvmNative {
@@ -34,7 +34,7 @@ graalvmNative {
     binaries {
         named("main") {
             imageName.set("draft-polisher")
-            mainClass.set("com.emmettchilds.coralseoswarmk26.writer.MainKt")
+            mainClass.set("seo.swarm.writer.MainKt")
             buildArgs.addAll(
                 listOf(
                     "--no-fallback",
