@@ -29,6 +29,7 @@ data class CoralSettings(private val env: EnvironmentOptionProvider) {
 
 data class ResolvedAgentSettings(private val env: EnvironmentOptionProvider) {
     val modelApiKey = env["MODEL_API_KEY"]
+    val exaApiKey = env["EXA_API_KEY"]
     val modelProvider = ModelProvider.entries.find {
         it.name.equals(env["MODEL_PROVIDER"], ignoreCase = true)
     }

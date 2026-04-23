@@ -57,6 +57,12 @@ required = true
 display.description = "API key for the selected provider (e.g. OpenRouter token)"
 secret = true
 
+[options.EXA_API_KEY]
+type = "string"
+required = true
+display.description = "Exa API key for the hosted MCP research tools (web_search_exa, web_fetch_exa)"
+secret = true
+
 [options.MODEL_ID]
 type = "string"
 default = "moonshotai/kimi-k2.6"

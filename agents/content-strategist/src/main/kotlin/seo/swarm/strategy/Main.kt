@@ -18,9 +18,15 @@ import kotlinx.serialization.json.Json
 import java.io.File
 import kotlin.uuid.ExperimentalUuidApi
 
-private suspend fun getToolRegistry(coralToolRegistry: ToolRegistry): ToolRegistry {
+private const val EXA_MCP_URL = "https://mcp.exa.ai/mcp"
+
+private suspend fun getToolRegistry(
+    coralToolRegistry: ToolRegistry,
+    exaToolRegistry: ToolRegistry,
+): ToolRegistry {
     return ToolRegistry {
         tools(coralToolRegistry.tools)
+        tools(exaToolRegistry.tools)
         //{CORALIZER:INSIDE_TOOL_REGISTRY_BLOCK}
         // Add more local tools here as desired
 
@@ -54,7 +60,15 @@ fun runAgent(settings: ResolvedAgentSettings) {
         }
 
         val coralToolRegistry = McpToolRegistryProvider.fromClient(coralMcpClient)
-        val combinedTools = getToolRegistry(coralToolRegistry)
+
+        println("Connecting to Exa MCP server at $EXA_MCP_URL")
+        val exaMcpClient = getMcpClientStreamableHttp(
+            EXA_MCP_URL,
+            headers = mapOf("x-api-key" to settings.exaApiKey),
+        )
+        val exaToolRegistry = McpToolRegistryProvider.fromClient(exaMcpClient)
+
+        val combinedTools = getToolRegistry(coralToolRegistry, exaToolRegistry)
 
         println("Available tools: ${combinedTools.tools.joinToString { it.name }}")
 

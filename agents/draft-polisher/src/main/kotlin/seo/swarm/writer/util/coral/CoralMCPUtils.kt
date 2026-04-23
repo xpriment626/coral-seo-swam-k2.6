@@ -12,6 +12,7 @@ import ai.koog.prompt.message.RequestMetaInfo
 import io.ktor.client.*
 import io.ktor.client.plugins.*
 import io.ktor.client.plugins.sse.*
+import io.ktor.client.request.*
 import io.modelcontextprotocol.kotlin.sdk.Implementation
 import io.modelcontextprotocol.kotlin.sdk.ReadResourceRequest
 import io.modelcontextprotocol.kotlin.sdk.TextResourceContents
@@ -51,7 +52,10 @@ fun buildInitialUserMessage(settings: ResolvedAgentSettings): String = buildInde
 }
 
 
-suspend fun getMcpClientStreamableHttp(serverUrl: String): Client {
+suspend fun getMcpClientStreamableHttp(
+    serverUrl: String,
+    headers: Map<String, String> = emptyMap(),
+): Client {
     val transport = StreamableHttpClientTransport(
         client = HttpClient {
             install(SSE)
@@ -59,6 +63,11 @@ suspend fun getMcpClientStreamableHttp(serverUrl: String): Client {
                 requestTimeoutMillis = 60000
                 connectTimeoutMillis = 60000
                 socketTimeoutMillis = 60000
+            }
+            if (headers.isNotEmpty()) {
+                defaultRequest {
+                    headers.forEach { (name, value) -> header(name, value) }
+                }
             }
         },
         url = serverUrl,
