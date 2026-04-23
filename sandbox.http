@@ -44,7 +44,8 @@ Content-Type: application/json
         "name": "keyword-researcher",
         "provider": { "type": "local", "runtime": "executable" },
         "options": {
-          "MODEL_API_KEY": { "type": "string", "value": "{{$dotenv OPENROUTER_API_KEY}}" }
+          "MODEL_API_KEY": { "type": "string", "value": "{{$dotenv OPENROUTER_API_KEY}}" },
+          "EXA_API_KEY": { "type": "string", "value": "{{$dotenv EXA_API_KEY}}" }
         }
       },
       {
@@ -56,7 +57,8 @@ Content-Type: application/json
         "name": "content-strategist",
         "provider": { "type": "local", "runtime": "executable" },
         "options": {
-          "MODEL_API_KEY": { "type": "string", "value": "{{$dotenv OPENROUTER_API_KEY}}" }
+          "MODEL_API_KEY": { "type": "string", "value": "{{$dotenv OPENROUTER_API_KEY}}" },
+          "EXA_API_KEY": { "type": "string", "value": "{{$dotenv EXA_API_KEY}}" }
         }
       },
       {
@@ -68,7 +70,8 @@ Content-Type: application/json
         "name": "draft-polisher",
         "provider": { "type": "local", "runtime": "executable" },
         "options": {
-          "MODEL_API_KEY": { "type": "string", "value": "{{$dotenv OPENROUTER_API_KEY}}" }
+          "MODEL_API_KEY": { "type": "string", "value": "{{$dotenv OPENROUTER_API_KEY}}" },
+          "EXA_API_KEY": { "type": "string", "value": "{{$dotenv EXA_API_KEY}}" }
         }
       },
       {
@@ -125,7 +128,7 @@ Content-Type: application/json
 
 {
   "threadId": "{{createThread.response.body.thread.id}}",
-  "content": "keyword analysis and SEO optimised blog for agentic memory systems. Research grounded in recent findings, April 2026. maximum 500 words. @keyword-researcher please start.",
+  "content": "keyword analysis and SEO optimised blog for agentic memory systems. Research grounded in recent findings, April 2026. maximum 500 words. Final draft must follow best practices for humanising AI output aka. making AI writing sound and look human written. @keyword-researcher please start.",
   "mentions": ["keyword-researcher"]
 }
 
