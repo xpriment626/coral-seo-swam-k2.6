@@ -128,7 +128,7 @@ Content-Type: application/json
 
 {
   "threadId": "{{createThread.response.body.thread.id}}",
-  "content": "keyword analysis and SEO optimised blog for agentic memory systems. Research grounded in recent findings, April 2026. maximum 500 words. Final draft must follow best practices for humanising AI output aka. making AI writing sound and look human written. @keyword-researcher please start.",
+  "content": "keyword analysis and SEO optimised blog for agentic memory systems. Research grounded in recent findings, April 2026. maximum 500 words. Final draft must follow best practices for humanising AI output aka. making AI writing sound and look human written. Additionally, keywords used and reasoning behind keyword selection must be compiled into a dedicated SEO analysis report once the final article draft itself is compelete. @keyword-researcher please start.",
   "mentions": ["keyword-researcher"]
 }
 
